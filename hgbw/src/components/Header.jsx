@@ -15,6 +15,9 @@ const Header = () => {
                     <img src={Logo} alt="Logo Image" className="w-20 h-auto mx-auto"/>
                     <button className="absolute right-4 w-8 h-8 bg-green-500"/>
                 </div>
+                <div>
+                    <p>adding something for test</p>
+                </div>
             </div>
         </>
     )
