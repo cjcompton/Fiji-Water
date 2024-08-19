@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Logo from '../assets/Mockup_01.png';
 import Dropdown from '../assets/menu.png';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -14,10 +15,20 @@ const Header = () => {
             {/** Header for desktop view */}
             <div className="w-screen h-screen flex justify-center bg-gray-400">
                 <div className="hidden md:block w-full h-20 p-6 bg-slate-800 columns-4">
-                    <div className="bg-green-400 w-full h-full"></div>
-                    <div className="bg-green-400 w-full h-full"></div>
-                    <div className="bg-green-400 w-full h-full"></div>
-                    <div className="bg-green-400 w-full h-full"></div>
+                    <div className="p-2 w-full h-full">
+                        <Link to="/" className="text-3xl text-white">
+                            Hello
+                        </Link>
+                    </div>
+                    <div className="p-2 w-full h-full">
+                        {/* Other navigation items can go here */}
+                    </div>
+                    <div className="p-2 w-full h-full">
+
+                    </div>
+                    <div className="p-2 w-full h-full">
+
+                    </div>
                 </div>
 
                 {/** Header for mobile view */}
