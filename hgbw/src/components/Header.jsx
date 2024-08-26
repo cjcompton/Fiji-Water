@@ -15,18 +15,17 @@ const Header = () => {
             {/** Header for desktop view */}
             <div className="hidden md:block w-full h-20 p-6 bg-slate-800 columns-4">
                 <div className="p-2 w-full h-full">
-                    {/** <Link to="/" className="text-3xl text-white">
-                        Hello
-                    </Link> */}
-                </div>
-                <div className="p-2 w-full h-full">
-                    {/* Other navigation items can go here */}
-                </div>
-                <div className="p-2 w-full h-full">
 
+                    {/** create a react router thing */}
                 </div>
                 <div className="p-2 w-full h-full">
-
+                    {/** about us */}
+                </div>
+                <div className="p-2 w-full h-full">
+                    {/** our mission */}
+                </div>
+                <div className="p-2 w-full h-full">
+                    {/** something else */}
                 </div>
             </div>
 
