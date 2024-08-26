@@ -43,13 +43,13 @@ const Header = () => {
             {/** Dark overlay when sidebar is open */}
             {isSidebarOpen && (
                 <div
-                    className="fixed inset-0 bg-black bg-opacity-50 z-10"
+                    className="fixed inset-0 bg-black bg-opacity-50 z-30"
                     onClick={dropDown} // Close sidebar when clicking the overlay
                 ></div>
             )}
 
             {/** Sidebar */}
-            <div className={`fixed top-0 right-0 h-full w-64 bg-gray-800 z-20 transform transition-transform duration-300 
+            <div className={`fixed top-0 right-0 h-full w-64 bg-gray-800 z-40 transform transition-transform duration-300 
                 ${isSidebarOpen ? 'translate-x-0' : 'translate-x-full'}`}>
             </div>
         </>
