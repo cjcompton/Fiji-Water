@@ -10,6 +10,10 @@ const Header = () => {
         setIsSidebarOpen(!isSidebarOpen); // Toggle the sidebar state
     }
 
+    function handleLinkClick() {
+        setIsSidebarOpen(false);
+    }
+
     return (
         <>
             {/** Header for desktop view
@@ -26,7 +30,7 @@ const Header = () => {
                     <Link to="contact" className="text-white text-xl">Contact</Link>
                 </div>
                 <div className="p-2 w-full h-full flex justify-center items-center">
-                    <Link to="contact" className="text-white text-xl">Our Mission</Link>
+                    <Link to="/" className="text-white text-xl">Our Mission</Link>
                 </div>
             </div>
 
@@ -44,13 +48,27 @@ const Header = () => {
             {isSidebarOpen && (
                 <div
                     className="fixed inset-0 bg-black bg-opacity-50 z-30"
-                    onClick={dropDown} // Close sidebar when clicking the overlay
+                    onClick={dropDown}
                 ></div>
             )}
 
             {/** Sidebar */}
             <div className={`fixed top-0 right-0 h-full w-64 bg-gray-800 z-40 transform transition-transform duration-300 
                 ${isSidebarOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+                    <div className="w-full h-full flex flex-col">
+                        <div className="p-4 flex justify-center items-center">
+                            <Link to="/" className="text-white text-3xl" onClick={handleLinkClick}>Home</Link>
+                        </div>
+                        <div className="p-4 flex justify-center items-center">
+                            <Link to="about" className="text-white text-3xl" onClick={handleLinkClick}>About</Link>
+                        </div>
+                        <div className="p-4 flex justify-center items-center">
+                            <Link to="contact" className="text-white text-3xl" onClick={handleLinkClick}>Contact</Link>
+                        </div>
+                        <div className="p-4 flex justify-center items-center">
+                            <Link to="/" className="text-white text-3xl" onClick={handleLinkClick}>Our Mission</Link>
+                        </div>
+                    </div>
             </div>
         </>
     );
