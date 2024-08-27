@@ -1,7 +1,7 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import Logo from '../assets/Mockup_01.png';
 import Dropdown from '../assets/menu.png';
-import { Link } from 'react-router-dom';
 
 const Header = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -12,20 +12,21 @@ const Header = () => {
 
     return (
         <>
-            {/** Header for desktop view */}
+            {/** Header for desktop view
+             * needs better font, more styling, and then a logo in the left hand corner
+             */}
             <div className="hidden md:block w-full h-20 p-6 bg-slate-800 columns-4">
-                <div className="p-2 w-full h-full">
-
-                    {/** create a react router thing */}
+                <div className="p-2 w-full h-full flex justify-center items-center">
+                    <Link to="/" className="text-white text-xl">Home</Link>
                 </div>
-                <div className="p-2 w-full h-full">
-                    {/** about us */}
+                <div className="p-2 w-full h-full flex justify-center items-center">
+                    <Link to="about" className="text-white text-xl">About</Link>
                 </div>
-                <div className="p-2 w-full h-full">
-                    {/** our mission */}
+                <div className="p-2 w-full h-full flex justify-center items-center">
+                    <Link to="contact" className="text-white text-xl">Contact</Link>
                 </div>
-                <div className="p-2 w-full h-full">
-                    {/** something else */}
+                <div className="p-2 w-full h-full flex justify-center items-center">
+                    <Link to="contact" className="text-white text-xl">Our Mission</Link>
                 </div>
             </div>
 
