@@ -7,11 +7,7 @@ const Header = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
     function dropDown() {
-        setIsSidebarOpen(!isSidebarOpen); // Toggle the sidebar state
-    }
-
-    function handleLinkClick() {
-        setIsSidebarOpen(false);
+        setIsSidebarOpen(!isSidebarOpen); 
     }
 
     return (
@@ -34,7 +30,9 @@ const Header = () => {
                 </div>
             </div>
 
-            {/** Header for mobile view */}
+            {/** Header for mobile view 
+             * a little plain
+            */}
             <div className="block md:hidden w-full h-20 bg-slate-800 flex justify-center items-center">
                 <img src={Logo} alt="Logo Image" className="w-20 h-auto mx-auto" />
                 <button 
@@ -52,21 +50,23 @@ const Header = () => {
                 ></div>
             )}
 
-            {/** Sidebar */}
+            {/** Sidebar 
+             * looks ugly
+            */}
             <div className={`fixed top-0 right-0 h-full w-64 bg-gray-800 z-40 transform transition-transform duration-300 
                 ${isSidebarOpen ? 'translate-x-0' : 'translate-x-full'}`}>
                     <div className="w-full h-full flex flex-col">
                         <div className="p-4 flex justify-center items-center">
-                            <Link to="/" className="text-white text-3xl" onClick={handleLinkClick}>Home</Link>
+                            <Link to="/" className="text-white text-3xl" onClick={dropDown}>Home</Link>
                         </div>
                         <div className="p-4 flex justify-center items-center">
-                            <Link to="about" className="text-white text-3xl" onClick={handleLinkClick}>About</Link>
+                            <Link to="about" className="text-white text-3xl" onClick={dropDown}>About</Link>
                         </div>
                         <div className="p-4 flex justify-center items-center">
-                            <Link to="contact" className="text-white text-3xl" onClick={handleLinkClick}>Contact</Link>
+                            <Link to="contact" className="text-white text-3xl" onClick={dropDown}>Contact</Link>
                         </div>
                         <div className="p-4 flex justify-center items-center">
-                            <Link to="/" className="text-white text-3xl" onClick={handleLinkClick}>Our Mission</Link>
+                            <Link to="/" className="text-white text-3xl" onClick={dropDown}>Our Mission</Link>
                         </div>
                     </div>
             </div>
