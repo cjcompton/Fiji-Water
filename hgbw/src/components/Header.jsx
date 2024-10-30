@@ -26,7 +26,7 @@ const Header = () => {
                     <Link to="contact" className="text-white text-xl">Contact</Link>
                 </div>
                 <div className="p-2 w-full h-full flex justify-center items-center">
-                    <Link to="/" className="text-white text-xl">Our Mission</Link>
+                    <Link to="purchase" className="text-white text-xl">Purchase</Link>
                 </div>
             </div>
 
@@ -34,7 +34,9 @@ const Header = () => {
              * a little plain
             */}
             <div className="block md:hidden w-full h-20 bg-slate-800 flex justify-center items-center">
-                <img src={Logo} alt="Logo Image" className="w-20 h-auto mx-auto" />
+                <Link to="/">
+                    <img src={Logo} alt="Logo Image" className="w-20 h-auto mx-auto" />
+                </Link>
                 <button 
                     className="absolute right-4 w-8 h-8 p-1 rounded-md bg-slate-400" 
                     onClick={dropDown}>
@@ -66,7 +68,7 @@ const Header = () => {
                             <Link to="contact" className="text-white text-3xl" onClick={dropDown}>Contact</Link>
                         </div>
                         <div className="p-4 flex justify-center items-center">
-                            <Link to="/" className="text-white text-3xl" onClick={dropDown}>Our Mission</Link>
+                            <Link to="purchase" className="text-white text-3xl" onClick={dropDown}>Purchase</Link>
                         </div>
                     </div>
             </div>

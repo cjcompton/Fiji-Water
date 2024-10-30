@@ -6,6 +6,7 @@ import App from './App.jsx'
 import Home from './components/Home.jsx';
 import About from './components/About.jsx';
 import Contact from './components/Contact.jsx';
+import Purchase from './components/Purchase.jsx';
 import './index.css'
 
 const router = createBrowserRouter([
@@ -23,7 +24,11 @@ const router = createBrowserRouter([
       },
       {
         path: "contact",
-        element: <Contact />
+        element: <Contact />,
+      },
+      {
+        path: "purchase",
+        element: <Purchase />,
       }
     ],
   },
